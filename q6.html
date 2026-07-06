@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 1</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- EDIT QUESTION TEXT HERE -->
+        <h2 class="question-text">what animal pair would you chose to represent abil - rummy?</h2>
+        
+       <div class="answers-grid">
+            <!-- 
+              How to configure the onclick function:
+              checkAnswer(isCorrect, 'The Correct Answer Text', 'NextPageURL.html')
+            -->
+            <div class="answer-card bg-blue" onclick="checkAnswer(true, 'koala - owl', 'stage2.html')">koala - owl</div>
+            <div class="answer-card bg-teal" onclick="checkAnswer(true, 'wolf - owl', 'stage2.html')">wolf - owl</div>
+            <div class="answer-card bg-yellow" onclick="checkAnswer(true, 'owl - koala', 'stage2.html')">owl - koala</div>
+            <div class="answer-card bg-pink" onclick="checkAnswer(true, 'we are humans, bruh', 'stage2.html')">we are humans, bruh</div>
+        </div>
+    </div>
+
+    <!-- The JavaScript that handles the logic -->
+    <script>
+        function checkAnswer(isCorrect, correctAnswerText, nextPageUrl) {
+            if (isCorrect) {
+                alert("There were no Right or Wrong in this one :b");
+            } else {
+                alert("Wrong! The correct answer is: " + correctAnswerText);
+            }
+            
+            // Redirect the user to the next page after they click 'OK' on the alert
+            window.location.href = nextPageUrl;
+        }
+    </script>
+</body>
+</html>

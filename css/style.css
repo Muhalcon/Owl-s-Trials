@@ -1,0 +1,120 @@
+/* css/style.css */
+body {
+    background-color: #40234a; /* Purple-ish background */
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.container {
+    width: 95%;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+/* Typography */
+.main-title {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+}
+.question-text {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+.transition-text {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Image Container */
+.question-image {
+    max-width: 100%;
+    max-height: 350px;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Standard Buttons */
+.btn {
+    background-color: #ffffff;
+    color: #40234a;
+    padding: 15px 40px;
+    font-size: 1.5rem;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    display: inline-block;
+    transition: background-color 0.2s;
+}
+.btn:hover {
+    background-color: #e0e0e0;
+}
+
+/* Answer Grid (Kahoot style) */
+.answers-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    width: 100%;
+}
+.answer-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 250px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    font-size: 1.8rem;
+    font-weight: bold;
+    box-sizing: border-box;
+    padding: 20px;
+    transition: transform 0.1s;
+    cursor: pointer; /* Add this line */
+}
+.answer-card:active {
+    transform: scale(0.98);
+}
+
+/* Colors from your image */
+.bg-blue { background-color: #2774ae; }
+.bg-teal { background-color: #269998; }
+.bg-yellow { background-color: #f1b01c; }
+.bg-pink { background-color: #dc5269; }
+
+/* Final Page Box */
+.final-box {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    max-width: 800px;
+    margin: 0 auto;
+}
+.final-box p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 900px) {
+    .answers-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .answer-card {
+        height: 150px;
+        font-size: 1.4rem;
+    }
+    .question-text {
+        font-size: 1.8rem;
+    }
+}
