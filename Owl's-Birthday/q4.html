@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 1</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- EDIT QUESTION TEXT HERE -->
+        <h2 class="question-text">When was your birth day again?</h2>
+        
+       <div class="answers-grid">
+            <!-- 
+              How to configure the onclick function:
+              checkAnswer(isCorrect, 'The Correct Answer Text', 'NextPageURL.html')
+            -->
+            <div class="answer-card bg-blue" onclick="checkAnswer(true, '6 July', 'q5.html')">6 July</div>
+            <div class="answer-card bg-teal" onclick="checkAnswer(false, '6 July', 'q4.html')">8 June</div>
+            <div class="answer-card bg-yellow" onclick="checkAnswer(false, '6 July', 'q4.html')">8 july</div>
+            <div class="answer-card bg-pink" onclick="checkAnswer(false, '6 July', 'q4.html')">6 June</div>
+        </div>
+    </div>
+
+    <!-- The JavaScript that handles the logic -->
+    <script>
+        function checkAnswer(isCorrect, correctAnswerText, nextPageUrl) {
+            if (isCorrect) {
+                alert("YES! That is correct!");
+            } else {
+                alert("Oh, cmon :|");
+            }
+            
+            // Redirect the user to the next page after they click 'OK' on the alert
+            window.location.href = nextPageUrl;
+        }
+    </script>
+</body>
+</html>
